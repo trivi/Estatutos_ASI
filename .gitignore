@@ -2,7 +2,5 @@
 *.aux
 *.log
 *.out
-*.pdf
+LogoASI-Granada-eps-converted-to.pdf
 *.tex.backup
-!Modelo orientativo-Estatutos modificados asociacion_Ministerio Interior.pdf
-!EstatutosASI.pdf
