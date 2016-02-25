@@ -3,5 +3,6 @@
 *.log
 *.out
 *.pdf
+*.tex.backup
 !Modelo orientativo-Estatutos modificados asociacion_Ministerio Interior.pdf
 !EstatutosASI.pdf
