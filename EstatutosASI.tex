@@ -4,22 +4,46 @@
 
 \usepackage{graphics,graphicx,color}
 
-\usepackage{setspace} % paquete para interlineado
+% paquete para interlineado
+\usepackage{setspace}
 
 \usepackage{geometry}
 \geometry{verbose,a4paper,tmargin=20mm,bmargin=30mm,lmargin=20mm,rmargin=20mm}
 
+% Paquete para crear listas
+\usepackage{enumitem, color, amssymb}
+
+% Paquete para enunciar 'teoremas'
+\usepackage{amsthm}
+% Formato para los 'Artículos' del documento
+\newtheoremstyle{mystyle}% name
+{22pt}		% space above
+{0}		% space below
+{}		% body font
+{\parindent}	% indent amount
+{\bf}		% theorem head font
+{.-}		% punctuation after theorem head
+{.5em}		% space after theorem head
+{}		% theorem head spec
+
+\theoremstyle{mystyle}		% establece el estilo modificado para teoremas por defecto
+\newtheorem{art}{Artículo}	% Crea una nueva lista de teoremas (para los artículos)
+
+
+% Definición del membrete para usarlo en el documento
 \def\membrete{
-\vspace*{-10mm}
-\hspace{90mm}
-\vbox{\hsize = 70mm
-\begin{center}\footnotesize\sf
+\hfill\parbox{8cm}{\raggedright
+\begin{center}
+\vspace{-10mm}
+\footnotesize\sf
 \includegraphics[scale=0.2]{LogoASI-Granada}\\
-{\bf Asociación de Jóvenes\\ Investigadores de Granada}\\
+{\bf Asociación de Jóvenes\\
+Investigadores de Granada}\\
 Facultad de Ciencias\\
 Avda. Fuentenueva, s/n\\
 18071 Granada\\
 España
+\vspace{10pt}
 \end{center}}}
 
 
@@ -28,71 +52,73 @@ España
 
 \membrete
 
-
 \begin{center}
 \Large{\bf Estatutos de la\\ Asociación de Jóvenes Investigadores de Granada}
 \end{center}
 
-\textit{ }
+\bigskip
 
-\begin{center}
-\textbf{CAPÍTULO I. Disposiciones Generales}
-\end{center}
+\begin{enumerate}[label={\bf CAPÍTULO \Roman*.}, align=left, series=capitulo]\centering
+ \item \textbf{Disposiciones Generales}
+\end{enumerate}
 
-\textbf{Artículo 1.-} Con la denominación de ASI, Asociación de Jóvenes Investigadores de Granada, se constituyó en la localidad de Granada, en la provincia de Granada, una entidad de naturaleza asociativa y sin ánimo de lucro, al amparo de la Ley 191/1964, de 24 de diciembre, reguladora de las Asociaciones. En cumplimiento de la Ley Orgánica 1/2002, de 22 de marzo, reguladora del Derecho de Asociación, y de su Disposición Transitoria Primera, la asociación pasa a regirse por los presentes Estatutos, adaptados a dicha Ley.
+\begin{art}
+Con la denominación de ASI, Asociación de Jóvenes Investigadores de Granada, se constituyó en la localidad de Granada, en la provincia de Granada, una entidad de naturaleza asociativa y sin ánimo de lucro, al amparo de la Ley 191/1964, de 24 de diciembre, reguladora de las Asociaciones. En cumplimiento de la Ley Orgánica 1/2002, de 22 de marzo, reguladora del Derecho de Asociación, y de su Disposición Transitoria Primera, la asociación pasa a regirse por los presentes Estatutos, adaptados a dicha Ley.
+\end{art}
 
-\bigskip\bigskip
+\begin{art}
+La Asociación constituida tiene personalidad jurídica propia y plena capacidad de obrar, pudiendo realizar, en consecuencia, todos aquellos actos que sean necesarios para el cumplimiento de la finalidad para la que ha sido creada, con sujeción a lo establecido en el ordenamiento jurídico.
+\end{art}
 
-\textbf{Artículo 2.-} La Asociación constituida tiene personalidad jurídica propia y plena capacidad de obrar, pudiendo realizar, en consecuencia, todos aquellos actos que sean necesarios para el cumplimiento de la finalidad para la que ha sido creada, con sujeción a lo establecido en el ordenamiento jurídico.
+\begin{art}
+La Asociación que se crea tiene nacionalidad española. El domicilio social de la Asociación radicará en la Facultad de Ciencias de la Universidad de Granada, Avda. Fuentenueva, s/n, de Granada, provincia de Granada, C.P. 18071. El cambio de domicilio requerirá acuerdo de la Asamblea General, convocada específicamente con tal objeto, y la modificación de los presentes Estatutos.
+\end{art}
 
-\bigskip\bigskip
+\begin{art}
+El ámbito territorial de acción de la Asociación se corresponde con el territorio de la provincia de Granada y de las Ciudades Autónomas de Ceuta y Melilla.
+\end{art}
 
-\textbf{Artículo 3.-} La Asociación que se crea tiene nacionalidad española. El domicilio social de la Asociación radicará en la Facultad de Ciencias de la Universidad de Granada, Avda. Fuentenueva, s/n, de Granada, provincia de Granada, C.P. 18071. El cambio de domicilio requerirá acuerdo de la Asamblea General, convocada específicamente con tal objeto, y la modificación de los presentes Estatutos.
+\begin{art}
+La Asociación se constituye por tiempo indefinido, y podrán nuevos socios causar alta en ella, o baja los antiguos, sin necesidad de nueva constitución.
+\end{art}
 
-\bigskip\bigskip
+\bigskip
 
-\textbf{Artículo 4.-} El ámbito territorial de acción de la Asociación se corresponde con el territorio de la provincia de Granada y de las Ciudades Autónomas de Ceuta y Melilla.
+\begin{enumerate}[resume*=capitulo]\centering
+ \item \textbf{Objeto de la Asociación}
+\end{enumerate}
 
-\bigskip\bigskip
+\begin{art}
+Los fines de la Asociación serán los siguientes:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Defender los derechos del Personal de investigación.
+ \item Promover todo tipo de acciones lícitas encaminadas a lograr una mejora continua de las condiciones en las que el Personal Investigador en fase inicial y perfeccionamiento desarrolla su tarea.
+ \item Promover todo tipo de acciones lícitas encaminadas a lograr para el Personal Investigador en fase inicial y perfeccionamiento el reconocimiento de los derechos inherentes a todo trabajador, según lo establecido en el Estatuto de  los Trabajadores y normas complementarias.
+ \item Fomentar el desarrollo y difusión de la ciencia, la cultura y la investigación científica en España.
+\end{enumerate}
 
-\textbf{Artículo 5.-} La Asociación se constituye por tiempo indefinido, y podrán nuevos socios causar alta en ella, o baja los antiguos, sin necesidad de nueva constitución.
+\bigskip
 
-\bigskip\bigskip
+\begin{enumerate}[resume*=capitulo]\centering
+ \item \textbf{De los órganos de gobierno y forma de administración}
+\end{enumerate}
 
-\begin{center}
-\textbf{CAPÍTULO II. Objeto de la Asociación}
-\end{center}
+\begin{enumerate}[label={\it SECCIÓN \arabic*ª.}, labelindent=1\parindent, leftmargin=*, series=seccion]
+ \item \textit{La asamblea General de socios}
+\end{enumerate}
 
-\bigskip\bigskip
+\begin{art}
+El órgano supremo y soberano de la Asociación es la Asamblea General de Socios o Asamblea General, integrada por la totalidad de los socios, que se hallen en uso pleno de sus derechos sociales. Adopta sus acuerdos por el principio mayoritario o de democracia interna. Las Asambleas podrán tener carácter ordinario y extraordinario, en la forma y competencias que se indican en los presentes Estatutos. La Asamblea General deberá reunirse, al menos, dos veces al año con carácter ordinario.
+\end{art}
 
-\textbf{Artículo 6.-} Los fines de la Asociación serán los siguientes:
-\begin{itemize}
-\item [a)] Defender los derechos del Personal de investigación.
-\item [b)] Promover todo tipo de acciones lícitas encaminadas a lograr una mejora continua de las condiciones en las que el Personal Investigador en fase inicial y perfeccionamiento desarrolla su tarea.
-\item [c)] Promover todo tipo de acciones lícitas encaminadas a lograr para el Personal Investigador en fase inicial y perfeccionamiento el reconocimiento de los derechos inherentes a todo trabajador, según lo establecido en el Estatuto de  los Trabajadores y normas complementarias.
-\item [d)] Fomentar el desarrollo y difusión de la ciencia, la cultura y la investigación científica en España.
-\end{itemize}
-
-\bigskip\bigskip
-\begin{center}
-\textbf{CAPÍTULO III. De los órganos de gobierno y forma de administración}
-\end{center}
-
-\bigskip\bigskip
-
-\textit{SECCIÓN 1\textordfeminine. La asamblea General de socios}
-
-\bigskip\bigskip
-
-\textbf{Artículo 7.-} El órgano supremo y soberano de la Asociación es la Asamblea General de Socios o Asamblea General, integrada por la totalidad de los socios, que se hallen en uso pleno de sus derechos sociales. Adopta sus acuerdos por el principio mayoritario o de democracia interna. Las Asambleas podrán tener carácter ordinario y extraordinario, en la forma y competencias que se indican en los presentes Estatutos. La Asamblea General deberá reunirse, al menos, dos veces al año con carácter ordinario.
-
-\bigskip\bigskip
-
-\textbf{Artículo 8.-} Las Asambleas serán convocadas por el Presidente de la Asociación, por iniciativa propia, por acuerdo de la Junta Directiva o por solicitud firmada por al menos el 20\% del número legal de socios.
+\begin{art}
+Las Asambleas serán convocadas por el Presidente de la Asociación, por iniciativa propia, por acuerdo de la Junta Directiva o por solicitud firmada por al menos el 20\% del número legal de socios.
+\end{art}
 
 Acordado por la Junta Directiva la convocatoria de una Asamblea General, el Presidente habrá de convocarla en el plazo máximo de quince días naturales, para su celebración. La fecha de celebración de la asamblea no podrá ser superior a un mes a contar desde la fecha del acuerdo.
 
-La solicitud de convocatoria efectuada por los socios habrá de contener expresamente el orden de día de la sesión, adjuntando los documentos o información que fuere necesaria para la adopción de los acuerdos, si dicha documentación o información hubiere de ser tenida en cuenta para ello.
+La solicitud de convocatoria efectuada por los socios habrá de contener expresamente el orden del día de la sesión, adjuntando los documentos o información que fuere necesaria para la adopción de los acuerdos, si dicha documentación o información hubiere de ser tenida en cuenta para ello.
 
 La solicitud habrá de ser presentada ante el Secretario de la Asociación, quien sellará una copia para su entrega al presentador de aquélla.
 
@@ -100,70 +126,70 @@ El Secretario de la Asociación, después de comprobar los requisitos formales (
 
 Si el Presidente no convocare en el plazo de los quince días subsiguientes o convocare la Asamblea dentro del plazo para su celebración con posterioridad al mes desde la solicitud, los promotores estarán legitimados para proceder a la convocatoria de la Asamblea General, expresando dichos extremos en la convocatoria, que irá firmada por la persona que encabece las firmas o lista de la solicitud.
 
-\bigskip\bigskip
-
-\textbf{Artículo 9.-} La convocatoria efectuada por las personas legitimadas para ello, de conformidad con lo dispuesto en el artículo anterior, habrá de ser comunicada con una antelación de al menos quince días a la celebración de la Asamblea, y será comunicada a los socios en forma acordada por la Junta Directiva.
+\begin{art}
+La convocatoria efectuada por las personas legitimadas para ello, de conformidad con lo dispuesto en el artículo anterior, habrá de ser comunicada con una antelación de al menos quince días a la celebración de la Asamblea, y será comunicada a los socios en forma acordada por la Junta Directiva.
+\end{art}
 
 La convocatoria deberá contener el orden del día, así como el lugar, fecha y hora de su celebración.La documentación necesaria e información que haya de ser tenida en cuenta para la adopción de los acuerdos, habrá de estar a disposición de los socios en la Secretaría de la Asociación, con una antelación mínima de quince días a la celebración de la Asamblea, la cual podrá ser examinada por aquéllos en la expresada Secretaría.
 
-\bigskip\bigskip
+\begin{art}
+La Asamblea General Ordinaria habrá de convocarse durante los tres primeros meses de cada año, al objeto de tratar los siguientes puntos del orden del día:
+\end{art}
+\begin{enumerate}[label={\arabic*.-}]
+ \item Lectura y aprobación, si procede, del acta de la sesión anterior (sea Asamblea General Ordinaria o Extraordinaria).
+ \item Examen y aprobación, si procediere, de las Cuentas del ejercicio anterior.
+ \item Examen de la memoria de actividades y aprobación, si procediere, de la gestión de la Junta Directiva.
+ \item Aprobación, si procediere, del Programa de Actividades.
+\end{enumerate}
 
-\textbf{Artículo 10.-} La Asamblea General Ordinaria habrá de convocarse durante los tres primeros meses de cada año, al objeto de tratar los siguientes puntos del orden del día:
-\begin{itemize}
-\item [1.-] Lectura y aprobación, si procede, del acta de la sesión anterior (sea Asamblea General Ordinaria o Extraordinaria).
-\item [2.-] Examen y aprobación, si procediere, de las Cuentas del ejercicio anterior.
-\item [3.-] Examen de la memoria de actividades y aprobación, si procediere, de la gestión de la Junta Directiva.
-\item [4.-] Aprobación, si procediere, del Programa de Actividades.
-\end{itemize}
+\begin{art}
+Se requerirá la convocatoria de Asamblea General Extraordinaria, para tratar de los siguientes aspectos:
+\end{art}
+\begin{enumerate}[label={\arabic*.-}]
+\item Modificación parcial o total de los Estatutos.
+\item Disolución de la Asociación.
+\item Nombramiento de la Junta Directiva.
+\item Disposición y Enajenación de Bienes.
+\item Constitución de una Federación, Confederación o Unión de Asociaciones o su integración en ella si ya existiere.
+\end{enumerate}
 
-\bigskip\bigskip
-
-\textbf{Artículo 11.-} Se requerirá la convocatoria de Asamblea General Extraordinaria, para tratar de los siguientes aspectos:
-\begin{itemize}
-\item [1.-] Modificación parcial o total de los Estatutos.
-\item [2.-] Disolución de la Asociación.
-\item [3.-] Nombramiento de la Junta Directiva.
-\item [4.-] Disposición y Enajenación de Bienes.
-\item [5.-] Constitución de una Federación, Confederación o Unión de Asociaciones o su integración en ella si ya existiere.
-\end{itemize}
-
-\bigskip\bigskip
-
-\textbf{Artículo 12.-} Las Asambleas, tanto ordinarias como extraordinarias, quedarán válidamente constituidas, previa convocatoria efectuada con una antelación de quince días, cuando concurran a ellas, presentes o representados, un tercio de los asociados con derecho a voto; en segunda convocatoria, cualquiera que sea el número de asociados con derecho a voto.
+\begin{art}
+Las Asambleas, tanto ordinarias como extraordinarias, quedarán válidamente constituidas, previa convocatoria efectuada con una antelación de quince días, cuando concurran a ellas, presentes o representados, un tercio de los asociados con derecho a voto; en segunda convocatoria, cualquiera que sea el número de asociados con derecho a voto.
+\end{art}
 
 Para el cómputo de socios o número de votos total, las representaciones habrán de presentarse al Secretario con inmediación al inicio de la sesión.
 
 Actuarán como presidente de la Asamblea, el presidente de la asociación, y como secretario de la Asamblea, el secretario de la asociación.
 
-\bigskip\bigskip
-
-\textbf{Artículo 13.-} Todos los asuntos se debatirán y votarán conforme figuren en el orden del día. El presidente iniciará el debate, abriendo un primer turno de intervenciones en el que se hará uso de la palabra previa su autorización. El presidente moderará los debates, pudiendo abrir un segundo turno de intervenciones o conceder las palabras por alusiones.
+\begin{art}
+Todos los asuntos se debatirán y votarán conforme figuren en el orden del día. El presidente iniciará el debate, abriendo un primer turno de intervenciones en el que se hará uso de la palabra previa su autorización. El presidente moderará los debates, pudiendo abrir un segundo turno de intervenciones o conceder las palabras por alusiones.
+\end{art}
 
 Los acuerdos de la Asamblea General se adoptarán por mayoría simple de las personas presentes o representadas, cuando los votos afirmativos superen a los negativos.
 
-No obstante, requerirán mayoria cualificada de las personas presentes o representadas, que resultará cuando los votos afirmativos superen la mitad, los acuerdos relativos a disolución de la asociación, modificación de los Estatutos, disposición o enajenación de bienes y remuneración de los miembros de la Junta Directiva.
+No obstante, requerirán mayoría cualificada de las personas presentes o representadas, que resultará cuando los votos afirmativos superen la mitad, los acuerdos relativos a disolución de la asociación, modificación de los Estatutos, disposición o enajenación de bienes y remuneración de los miembros de la Junta Directiva.
 
 Los acuerdos de la Asamblea General que afecten a la denominación de la Asociación, domicilio, fines y actividades estatutarias, ámbito de actuación, designación de los miembros de la Junta Directiva, apertura y cierre de delegaciones, constitución de federaciones, confederaciones y uniones, disolución, o los de modificaciones estatutarias, se comunicarán al Registro de Asociaciones para su inscripción, en el plazo de un mes desde que se produzca el acuerdo.
 
-\bigskip\bigskip
+\begin{art}
+La representación o delegación de voto sólo será válida para la sesión o convocatoria por la que se expida, siendo nula cualquier delegación o representación indefinida. Habrá de hacerse constar por escrito, con indicación de los datos personales y número de DNI del delegante y representado, y firmado y rubricado por ambos.
+\end{art}
 
-\textbf{Artículo 14.-} La representación o delegación de voto sólo será válida para la sesión o convocatoria por la que se expida, siendo nula cualquier delegación o representación indefinida. Habrá de hacerse constar por escrito, con indicación de los datos personales y número de DNI del delegante y representado, y firmado y rubricado por ambos.
+\begin{enumerate}[resume*=seccion]
+ \item \textit{De los órganos de representación}
+\end{enumerate}
 
-\bigskip\bigskip
+\begin{art}
+La Junta Directiva es el órgano colegiado de gobierno, representación y administración de la Asociación, sin perjuicio de las potestades de la Asamblea General como órgano soberano. Su mandato será de un año, pudiendo sus miembros ser reelegidos una sola vez.
+\end{art}
 
-\textit{SECCIÓN 2\textordfeminine. De los órganos de representación}
+\begin{art}
+La Junta Directiva estará formada por un Presidente, un Vicepresidente, un Secretario, un Tesorero y un número indefinido de vocales, que será fijado por la Asamblea General, y que en cualquier caso no será inferior a dos. Todos los miembros de la Junta Directiva serán designados y revocados por la Asamblea General. El ejercicio del cargo será personal, sin que pueda delegarse el voto en las sesiones de la Junta Directiva.
+\end{art}
 
-\bigskip\bigskip
-
-\textbf{Artículo 15.-} La Junta Directiva es el órgano colegiado de gobierno, representación y administración de la Asociación, sin perjuicio de las potestades de la Asamblea General como órgano soberano. Su mandato será de un año, pudiendo sus miembros ser reelegidos una sola vez.
-
-\bigskip\bigskip
-
-\textbf{Artículo 16.-} La Junta Directiva estará formada por un Presidente, un Vicepresidente, un Secretario, un Tesorero y un número indefinido de vocales, que será fijado por la Asamblea General, y que en cualquier caso no será inferior a dos. Todos los miembros de la Junta Directiva serán designados y revocados por la Asamblea General. El ejercicio del cargo será personal, sin que pueda delegarse el voto en las sesiones de la Junta Directiva.
-
-\bigskip\bigskip
-
-\textbf{Artículo 17.-} Para ser miembro de la Junta Directiva serán requisitos imprescindibles ser mayor de edad, estar en pleno uso de los derechos civiles y no estar incurso en los motivos de incompatibilidad establecidos en la legislación vigente.
+\begin{art}
+Para ser miembro de la Junta Directiva serán requisitos imprescindibles ser mayor de edad, estar en pleno uso de los derechos civiles y no estar incurso en los motivos de incompatibilidad establecidos en la legislación vigente.
+\end{art}
 
 Los miembros de la Junta Directiva serán elegidos, entre los socios, en Asamblea General Extraordinaria, de conformidad con lo dispuesto en el artículo 11.
 
@@ -171,224 +197,224 @@ Una vez convocada la Asamblea General para la designación de los miembros de la
 
 Al comienzo de la Asamblea General para la designación de los miembros de la Junta Directiva, la anterior Junta Directiva, constituida en Comisión Electoral, dará a conocer las candidaturas, aceptando y resolviendo las reclamaciones que sobre las mismas se pudieran derivar. Producida una vacante, provisionalmente, la Junta Directiva podrá designar a otro miembro de la misma para su sustitución, hasta que se produzca la elección del vocal correspondiente por la Asamblea General en la primera sesión que se convoque.
 
-\bigskip\bigskip
-
-\textbf{Artículo 18.-} Los miembros de la Junta Directiva cesarán en sus respectivos cargos por las siguientes causas:
-\begin{itemize}
-\item [a)] Por muerte o declaración de fallecimiento.
-\item [b)] Por incapacidad, inhabilitación o incompatibilidad, de acuerdo con lo establecido en el ordenamiento jurídico.
-\item [c)] Por resolución judicial.
-\item [d)] Por transcurso del periodo de su mandato. No obstante, hasta tanto no se proceda a la Asamblea General subsiguiente para la elección de la nueva Junta Directiva, aquélla continuará en funciones, debiéndose expresar dicho carácter en cuantos documentos hubieren de firmar en función a los respectivos cargos.
-\item [e)] Por renuncia.
-\item [f)] Por acuerdo adoptado con las formalidades estatutarias, en cualquier momento, por la Asamblea General.
-\item [g)] Por la pérdida de la condición de socio.
-\end{itemize}
+\begin{art}
+Los miembros de la Junta Directiva cesarán en sus respectivos cargos por las siguientes causas:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Por muerte o declaración de fallecimiento.
+ \item Por incapacidad, inhabilitación o incompatibilidad, de acuerdo con lo establecido en el ordenamiento jurídico.
+ \item Por resolución judicial.
+ \item Por transcurso del periodo de su mandato. No obstante, hasta tanto no se proceda a la Asamblea General subsiguiente para la elección de la nueva Junta Directiva, aquélla continuará en funciones, debiéndose expresar dicho carácter en cuantos documentos hubieren de firmar en función a los respectivos cargos.
+ \item Por renuncia.
+ \item Por acuerdo adoptado con las formalidades estatutarias, en cualquier momento, por la Asamblea General.
+ \item Por la pérdida de la condición de socio.
+\end{enumerate}
 
 Los ceses y nombramientos habrán de ser comunicados al Registro de Asociaciones, para su debida constancia y publicidad.
 
-\bigskip\bigskip
+\begin{art}
+Corresponde al Presidente:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Ostentar la representación de la Asociación ante toda clase de personas, autoridades y entidades públicas o privadas.
+ \item Convocar las reuniones de la Junta Directiva y de la Asamblea General, presidirlas, dirigir sus debates, suspender y levantar las sesiones.
+ \item Ejecutar los acuerdos de la Junta Directiva y de la Asamblea General, pudiendo para ello realizar toda clase de actos y contratos y firmar aquellos documentos necesarios a tal fin; sin perjuicio de que por cada órgano en el ejercicio de sus competencias, al adoptar los acuerdos se faculte expresamente para su ejecución a cualquier otro miembro de la Junta Directiva.
+ \item Cumplir y hacer cumplir los acuerdos de la Junta Directiva y Asamblea General.
+ \item Ordenar los gastos y pagos de la Asociación.
+ \item Dirimir con su voto los empates.
+ \item Visar las actas y certificaciones de los acuerdos de la Junta Directiva y Asamblea General.
+ \item Ejercer cuantas otras funciones sean inherentes a su condición de Presidente de la Junta Directiva y de la Asociación.
+\end{enumerate}
 
-\textbf{Artículo 19.-} Corresponde al Presidente:
-\begin{itemize}
-\item [a)] Ostentar la representación de la Asociación ante toda clase de personas, autoridades y entidades públicas o privadas.
-\item [b)] Convocar las reuniones de la Junta Directiva y de la Asamblea General, presidirlas, dirigir sus debates, suspender y levantar las sesiones.
-\item [c)] Ejecutar los acuerdos de la Junta Directiva y de la Asamblea General, pudiendo para ello realizar toda clase de actos y contratos y firmar aquellos documentos necesarios a tal fin; sin perjuicio de que por cada órgano en el ejercicio de sus competencias, al adoptar los acuerdos se faculte expresamente para su ejecución a cualquier otro miembro de la Junta Directiva.
-\item [d)] Cumplir y hacer cumplir los acuerdos de la Junta Directiva y Asamblea General.
-\item [e)] Ordenar los gastos y pagos de la Asociación.
-\item [f)] Dirimir con su voto los empates.
-\item [g)] Visar las actas y certificaciones de los acuerdos de la Junta Directiva y Asamblea General.
-\item [h)] Ejercer cuantas otras funciones sean inherentes a su condición de Presidente de la Junta Directiva y de la Asociación.
-\end{itemize}
+\begin{art}
+Corresponde al Vicepresidente:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Sustituir al Presidente en los casos de vacante, ausencia o enfermedad.
+ \item Colaborar con el Presidente y ejercer las atribuciones que le sean delegadas o encomendadas por éste.
+\end{enumerate}
 
-\bigskip\bigskip
-
-\textbf{Artículo 20.-} Corresponde al Vicepresidente:
-\begin{itemize}
-\item [a)]  Sustituir al Presidente en los casos de vacante, ausencia o enfermedad.
-\item [b)]  Colaborar con el Presidente y ejercer las atribuciones que le sean delegadas o encomendadas por éste.
-\end{itemize}
-
-\bigskip\bigskip
-
-\textbf{Artículo 21.-} Corresponde al Secretario:
-\begin{itemize}
-\item [a)] Asistir a las sesiones de la Junta Directiva y Asamblea y redactar y autorizar las actas de aquéllas.
-\item [b)] Efectuar la convocatoria de las sesiones de la Junta Directiva y Asamblea, por orden del Presidente, así como las citaciones de los miembros de aquélla y socios de ésta.
-\item [c)] Dar cuenta inmediata al Presidente de la solicitud de convocatoria efectuada por los socios en la forma prevista en el artículo 8 de los presentes Estatutos.
-\item [d)] Recibir los actos de comunicación de los miembros de la Junta Directiva con relación a ésta y de los socios y, por tanto, las notificaciones, peticiones de datos, rectificaciones, certificaciones o cualquiera otra clase de escritos de los que deba tener conocimiento.
-\item [e)] Preparar el despacho de los asuntos, y por lo tanto con la documentación correspondiente que hubiere de ser utilizada o tenida en cuenta.
-\item [f)] Expedir certificaciones de los acuerdos aprobados y cualesquiera otras certificaciones, con el visto bueno del Presidente, así como los informes que fueren necesarios.
-\item [g)] Tener bajo su responsabilidad y custodia el Archivo, documentos y Libros de la Asociación, a excepción del/los libros de contabilidad.
-\item [h)] Cualesquiera otras funciones inherentes a su condición de Secretario.
-\end{itemize}
+\begin{art}
+Corresponde al Secretario:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Asistir a las sesiones de la Junta Directiva y Asamblea y redactar y autorizar las actas de aquéllas.
+ \item Efectuar la convocatoria de las sesiones de la Junta Directiva y Asamblea, por orden del Presidente, así como las citaciones de los miembros de aquélla y socios de ésta.
+ \item Dar cuenta inmediata al Presidente de la solicitud de convocatoria efectuada por los socios en la forma prevista en el artículo 8 de los presentes Estatutos.
+ \item Recibir los actos de comunicación de los miembros de la Junta Directiva con relación a ésta y de los socios y, por tanto, las notificaciones, peticiones de datos, rectificaciones, certificaciones o cualquiera otra clase de escritos de los que deba tener conocimiento.
+ \item Preparar el despacho de los asuntos, y por lo tanto con la documentación correspondiente que hubiere de ser utilizada o tenida en cuenta.
+ \item Expedir certificaciones de los acuerdos aprobados y cualesquiera otras certificaciones, con el visto bueno del Presidente, así como los informes que fueren necesarios.
+ \item Tener bajo su responsabilidad y custodia el Archivo, documentos y Libros de la Asociación, a excepción del/los libros de contabilidad.
+ \item Cualesquiera otras funciones inherentes a su condición de Secretario.
+\end{enumerate}
 
 En los casos de ausencia o enfermedad y, en general, cuando concurra alguna causa justificada, el Secretario será sustituido por el vocal de menor edad.
 
-\bigskip\bigskip
+\begin{art}
+Corresponde al Tesorero:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Recaudar los fondos de la Asociación, custodiarlos e invertirlos en la forma determinada por la Junta Directiva.
+ \item Efectuar los pagos, con el visto bueno del Presidente.
+ \item Intervenir con su firma todos los documentos de cobros y pagos, con el conforme del Presidente.
+ \item La llevanza de los libros de contabilidad y el cumplimiento de las obligaciones fiscales, en plazo y forma, de la Asociación.
+ \item La elaboración del Estado General de Cuentas para su aprobación anual por la Asamblea.
+ \item Cualesquiera otras inherentes a su condición de tesorero, como responsable de la gestión económica financiera.
+\end{enumerate}
 
-\textbf{Artículo 22.-} Corresponde al Tesorero:
-\begin{itemize}
-\item [a)] Recaudar los fondos de la Asociación, custodiarlos e invertirlos en la forma determinada por la Junta Directiva.
-\item [b)] Efectuar los pagos, con el visto bueno del Presidente.
-\item [c)] Intervenir con su firma todos los documentos de cobros y pagos, con el conforme del Presidente.
-\item [d)] La llevanza de los libros de contabilidad y el cumplimiento de las obligaciones fiscales, en plazo y forma, de la Asociación.
-\item [e)] La elaboración del Estado General de Cuentas para su aprobación anual por la Asamblea.
-\item [f)] Cualesquiera otras inherentes a su condición de tesorero, como responsable de la gestión económica financiera.
-\end{itemize}
-
-\bigskip\bigskip
-
-\textbf{Artículo 23.-} De conformidad con el artículo 16, en la Junta Directiva habrá al menos dos vocales:
-\begin{itemize}
-\item  Un vocal que actuará como portavoz y representante de la Asociación ante la Federación de Jóvenes Investigadores.
-\item  Un vocal que actuará como portavoz de la asociación ante los medios de comunicación.
-\end{itemize}
+\begin{art}
+De conformidad con el artículo 16, en la Junta Directiva habrá al menos dos vocales:
+\end{art}
+\begin{enumerate}[label=$\bullet$]
+ \item Un vocal que actuará como portavoz y representante de la Asociación ante la Federación de Jóvenes Investigadores.
+ \item Un vocal que actuará como portavoz de la asociación ante los medios de comunicación.
+\end{enumerate}
 
 La Asamblea General podrá designar además nuevos vocales, delimitando en el momento de su designación las funciones específicas que tendrán.
 
-\bigskip\bigskip
+\begin{art}
+De forma genérica, y sin menoscabo de sus funciones específicas, corresponde a los vocales:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Recibir la convocatoria de la sesión de Junta Directiva con la antelación fijada en los presentes Estatutos, conteniendo aquélla el orden del día.
+ \item Participar en el debate de las sesiones.
+ \item Ejercer su derecho al voto y formular su voto particular, así como expresar el sentido de su voto y los motivos que lo justifican.
+ \item Formular ruegos y preguntas.
+ \item Obtener la información precisa para el cumplimiento de las funciones que le fueren asignadas.
+\end{enumerate}
 
-\textbf{Artículo 24.-} De forma genérica, y sin menoscabo de sus funciones específicas, corresponde a los vocales:
-\begin{itemize}
-\item [a)] Recibir la convocatoria de la sesión de Junta Directiva con la antelación fijada en los presentes Estatutos, conteniendo aquélla el orden del día.
-\item [b)] Participar en el debate de las sesiones.
-\item [c)] Ejercer su derecho al voto y formular su voto particular, así como expresar el sentido de su voto y los motivos que lo justifican.
-\item [d)] Formular ruegos y preguntas.
-\item [e)] Obtener la información precisa para el cumplimiento de las funciones que le fueren asignadas.
-\end{itemize}
+\begin{art}
+Convocatorias y sesiones de la Junta Directiva
+\end{art}
+\begin{enumerate}[label={\arabic*.-}]
+ \item Para la válida constitución de la Junta Directiva, a efectos de la celebración de sesiones, deliberaciones y adopción de acuerdos, deberán estar presentes la mitad de sus miembros requiriéndose, necesariamente, la presencia del Presidente y del Secretario o de quienes les sustituyan.
+ \item La Junta Directiva se reunirá, al menos, una vez al trimestre y cuantas veces como sea preciso para la buena marcha de la Asociación, por convocatoria realizada por el Presidente, a iniciativa propia o de cualesquiera de sus miembros.
+ \item La convocatoria , con sus elementos formales (orden del día, lugar y fecha...), se hará llegar con una antelación mínima de 48 horas a su celebración.
+ \item Las deliberaciones seguirán el mismo régimen señalado en el artículo 13 para la Asamblea General. Los acuerdos se adoptarán por mayoría simple de los votos emitidos, dirimiendo el voto del Presidente en caso de empate.
+ \item No podrá adoptarse acuerdo alguno que no figure en el orden del día, salvo que, estando presentes la totalidad de los miembros que componen la Junta Directiva, lo acuerden por unanimidad.
+ \item Igualmente quedará válidamente constituida la Junta Directiva sin convocatoria previa, cuando estando presentes todos y cada uno de los miembros, así se acuerde por unanimidad, respetando lo mencionado en el apartado anterior en cuanto a los acuerdos. Las Juntas así constituidas recibirán la denominación de Junta Directiva Universal.
+ \item A las sesiones de la Junta Directiva podrán asistir aquellas personas con funciones de asesoramiento, previamente citadas o invitadas por el Presidente, con voz y sin voto para mejor acierto en sus deliberaciones.
+\end{enumerate}
 
-\bigskip\bigskip
-\newpage
-\textbf{Artículo 25.-} Convocatorias y sesiones de la Junta Directiva
-\begin{itemize}
-\item [1.-] Para la válida constitución de la Junta Directiva, a efectos de la celebración de sesiones, deliberaciones y adopción de acuerdos, deberán estar presentes la mitad de sus miembros requiriéndose, necesariamente, la presencia del Presidente y del Secretario o de quienes les sustituyan.
-\item [2.-] La Junta Directiva se reunirá, al menos, una vez al trimestre y cuantas veces como sea preciso para la buena marcha de la Asociación, por convocatoria realizada por el Presidente, a iniciativa propia o de cualesquiera de sus miembros.
-\item [3.-] La convocatoria , con sus elementos formales (orden del día, lugar y fecha...), se hará llegar con una antelación mínima de 48 horas a su celebración.
-\item [4.-] Las deliberaciones seguirán el mismo régimen señalado en el artículo 13 para la Asamblea General. Los acuerdos se adoptarán por mayoría simple de los votos emitidos, dirimiendo el voto del Presidente en caso de empate.
-\item [5.-] No podrá adoptarse acuerdo alguno que no figure en el orden del día, salvo que, estando presentes la totalidad de los miembros que componen la Junta Directiva, lo acuerden por unanimidad.
-\item [6.-] Igualmente quedará válidamente constituida la Junta Directiva sin convocatoria previa, cuando estando presentes todos y cada uno de los miembros, así se acuerde por unanimidad, respetando lo mencionado en el apartado anterior en cuanto a los acuerdos. Las Juntas así constituidas recibirán la denominación de Junta Directiva Universal.
-\item [7.-] A las sesiones de la Junta Directiva podrán asistir aquellas personas con funciones de asesoramiento, previamente citadas o invitadas por el Presidente, con voz y sin voto para mejor acierto en sus deliberaciones.
-\end{itemize}
+\begin{art}
+La Junta Directiva tendrá las siguientes atribuciones:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Confeccionar el Plan de Actividades.
+ \item Otorgar apoderamientos generales o especiales.
+ \item Organizar y desarrollar las actividades aprobadas por la Asamblea General.
+ \item Aprobar el estado de Cuentas elaborado por el Tesorero, para su aprobación definitiva, si procediere, por la Asamblea General.
+ \item Elaborar la Memoria anual de actividades para su informe a la Asamblea General.
+ \item Creación de Comisiones de Trabajo que estime conveniente, para el desarrollo de las funciones encomendadas y las actividades aprobadas, así como para cualesquiera otras cuestiones derivadas del cumplimiento de los fines sociales. Dichas comisiones regularán su funcionamiento interno en la forma que se acuerden por éstas en su primera sesión constitutiva.
+ \item Resolver las solicitudes relativas a la admisión de socios.
+\end{enumerate}
 
-\bigskip\bigskip
-
-\textbf{Artículo 26.-} La Junta Directiva tendrá las siguientes atribuciones:
-\begin{itemize}
-\item [a)] Confeccionar el Plan de Actividades.
-\item [b)] Otorgar apoderamientos generales o especiales.
-\item [c)] Organizar y desarrollar las actividades aprobadas por la Asamblea General.
-\item [d)] Aprobar el estado de Cuentas elaborado por el Tesorero, para su aprobación definitiva, si procediere, por la Asamblea General.
-\item [e)] Elaborar la Memoria anual de actividades para su informe a la Asamblea General.
-\item [f)] Creación de Comisiones de Trabajo que estime conveniente, para el desarrollo de las funciones encomendadas y las actividades aprobadas, así como para cualesquiera otras cuestiones derivadas del cumplimiento de los fines sociales. Dichas comisiones regularán su funcionamiento interno en la forma que se acuerden por éstas en su primera sesión constitutiva.
-\item [g)] Resolver las solicitudes relativas a la admisión de socios.
-\end{itemize}
-
-\bigskip\bigskip
-
-\textbf{Artículo 27.-} Son obligaciones de los miembros de la Junta Directiva, a título enunciativo, cumplir y hacer cumplir los fines de la Asociación, concurrir a las reuniones a las que sean convocados, desempeñar el cargo con la debida diligencia de un representante leal y cumplir en sus actuaciones con lo determinado en las disposiciones legales vigentes y en los presentes Estatutos.
+\begin{art}
+Son obligaciones de los miembros de la Junta Directiva, a título enunciativo, cumplir y hacer cumplir los fines de la Asociación, concurrir a las reuniones a las que sean convocados, desempeñar el cargo con la debida diligencia de un representante leal y cumplir en sus actuaciones con lo determinado en las disposiciones legales vigentes y en los presentes Estatutos.
+\end{art}
 
 Los miembros de la Junta Directiva responderán frente a la Asociación de los daños y perjuicios que causen por actos contrarios a la Ley o a los Estatutos o por los realizados negligentemente. Quedarán exentos de responsabilidad quienes se opusieren expresamente al acuerdo determinante de tales actos o no hubiere participado en su adopción.
 
-\bigskip\bigskip
+\begin{art}
+Los miembros de la Junta Directiva ejercerán su cargo gratuitamente, sin que en ningún caso puedan recibir retribución por el desempeño de su función, sin perjuicio del derecho a ser reembolsados en los gastos ocasionados en ejercicio de los cargos, siempre que éstos se encuentren debida y formalmente justificados.
+\end{art}
 
-\textbf{Artículo 28.-} Los miembros de la Junta Directiva ejercerán su cargo gratuitamente, sin que en ningún caso puedan recibir retribución por el desempeño de su función, sin perjuicio del derecho a ser reembolsados en los gastos ocasionados en ejercicio de los cargos, siempre que éstos se encuentren debida y formalmente justificados.
+\begin{enumerate}[resume*=seccion]
+ \item \textit{Disposiciones comunes a los órganos}
+\end{enumerate}
 
-\bigskip\bigskip
+\begin{art}
+De las actas.
+\end{art}
+\begin{enumerate}[label={\arabic*.-}]
+ \item De cada sesión que celebren la Asamblea General y Junta Directiva   se   levantará    acta   por el Secretario,  que  especificará necesariamente el quórum necesario para la válida constitución (en el caso de la Junta Directiva se especificará necesariamente los asistentes), el orden del día de la reunión, las circunstancias del lugar y tiempo en que se han celebrado, los puntos principales de las deliberaciones, así como el contenido de los acuerdos adoptados.
+ \item En el acta figurará, a solicitud de los respectivos miembros y/o socios, el voto contrario al acuerdo adoptado, su abstención y los motivos que la justifiquen o el sentido de su voto favorable. Asimismo, cualquier miembro tiene derecho a solicitar la transcripción íntegra de su intervención o propuesta, siempre que aporte en el acto o en el plazo de cuarenta y ocho horas el texto que se corresponda fielmente con su intervención, haciéndose así constar en el acta o uniéndose copia a la misma.
+ \item Las actas se aprobarán en la misma o en la siguiente sesión, pudiendo no obstante emitir el Secretario certificación sobre los acuerdos específicos que se hayan adoptado, sin perjuicio de la ulterior aprobación del acta. En las certificaciones de acuerdos adoptados emitidas con anterioridad a la aprobación del acta se hará constar expresamente tal circunstancia.
+ \item Las Actas serán firmadas por el Secretario y visadas por el Presidente.
+\end{enumerate}
 
-\textit{SECCIÓN 3\textordfeminine. Disposiciones comunes a los órganos}
+\begin{art}
+Los acuerdos de la Asamblea General y Junta Directiva podrán ser impugnados ante el orden jurisdiccional civil en la forma legalmente establecida. Los asociados podrán impugnar los acuerdos y actuaciones de la asociación que estimen contrarios a los Estatutos dentro del plazo de cuarenta días, a partir de la fecha de adopción de los mismos, instando su rectificación o anulación y la suspensión preventiva en su caso, o acumulando ambas pretensiones por los trámites establecidos en la Ley de Enjuiciamiento Civil. En tanto se resuelven las contiendas de orden interno que puedan suscitarse en la asociación, las solicitudes de constancia registral que se formulen sobre las cuestiones controvertidas sólo darán lugar a anotaciones provisionales.
+\end{art}
 
-\bigskip\bigskip
+\bigskip
 
-\textbf{Artículo 29.-} De las actas.
-\begin{itemize}
-\item [1.-] De cada sesión que celebren la Asamblea General y Junta Directiva   se   levantará    acta   por el Secretario,  que  especificará necesariamente el quórum necesario para la válida constitución (en el caso de la Junta Directiva se especificará necesariamente los asistentes), el orden del día de la reunión, las circunstancias del lugar y tiempo en que se han celebrado, los puntos principales de las deliberaciones, así como el contenido de los acuerdos adoptados.
-\item [2.-] En el acta figurará, a solicitud de los respectivos miembros y/o socios, el voto contrario al acuerdo adoptado, su abstención y los motivos que la justifiquen o el sentido de su voto favorable. Asimismo, cualquier miembro tiene derecho a solicitar la transcripción íntegra de su intervención o propuesta, siempre que aporte en el acto o en el plazo de cuarenta y ocho horas el texto que se corresponda fielmente con su intervención, haciéndose así constar en el acta o uniéndose copia a la misma.
-\item [3.-] Las actas se aprobarán en la misma o en la siguiente sesión, pudiendo no obstante emitir el Secretario certificación sobre los acuerdos específicos que se hayan adoptado, sin perjuicio de la ulterior aprobación del acta. En las certificaciones de acuerdos adoptados emitidas con anterioridad a la aprobación del acta se hará constar expresamente tal circunstancia.
-\item [4.-] Las Actas serán firmadas por el Secretario y visadas por el Presidente.
-\end{itemize}
+\begin{enumerate}[resume*=capitulo]\centering
+ \item \textbf{Procedimiento de admisión y pérdida de la cualidad de socio}
+\end{enumerate}
 
-\bigskip\bigskip
+\begin{art}
+Para adquirir la condición de socio se requiere ser persona física o jurídica, y estar interesada en los fines de la Asociación. La solicitud para adquirir la condición de socio debe aceptarse por la Junta Directiva.
+\end{art}
 
-\textbf{Artículo 30.-} Los acuerdos de la Asamblea General y Junta Directiva podrán ser impugnados ante el orden jurisdiccional civil en la forma legalmente establecida. Los asociados podrán impugnar los acuerdos y actuaciones de la asociación que estimen contrarios a los Estatutos dentro del plazo de cuarenta días, a partir de la fecha de adopción de los mismos, instando su rectificación o anulación y la suspensión preventiva en su caso, o acumulando ambas pretensiones por los trámites establecidos en la Ley de Enjuiciamiento Civil. En tanto se resuelven las contiendas de orden interno que puedan suscitarse en la asociación, las solicitudes de constancia registral que se formulen sobre las cuestiones controvertidas sólo darán lugar a anotaciones provisionales.
+\begin{art}
+La condición de socio se perderá por alguna de las siguientes causas:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Por renuncia voluntaria, comunicada por escrito a la Junta Directiva.
+ \item Por impago reiterado de la cuota de la asociación.
+ \item Por incumplimiento grave de los presentes Estatutos o de los acuerdos válidamente adoptados por los órganos sociales.
+\end{enumerate}
 
-\bigskip\bigskip
+\bigskip
 
-\begin{center}
-\textbf{CAPÍTULO IV. Procedimiento de admisión y pérdida de la cualidad de socio}
-\end{center}
+\begin{enumerate}[resume*=capitulo]\centering
+ \item \textbf{Derechos y Deberes de los Socios}
+\end{enumerate}
 
-\bigskip\bigskip
+\begin{art}
+Son derechos de los socios:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Participar en las actividades de la asociación y en los órganos de gobierno y representación, a ejercer el derecho de voto, así como a asistir a la Asamblea General, de acuerdo con los Estatutos.
+ \item Ser informado acerca de la composición de los órganos de gobierno y representación de la asociación, de su estado de cuentas y del desarrollo de su actividad.
+ \item Ser oído con carácter previo a la adopción de medidas disciplinarias contra él y ser informado de los hechos que den lugar a tales medidas, debiendo ser motivado el acuerdo que, en su caso, imponga la sanción.
+ \item Acceder a la documentación de la asociación, a través de la Junta Directiva.
+ \item Usar los bienes e instalaciones de uso común de la Asociación, con respeto a igual derecho del resto de los socios.
+\end{enumerate}
 
-\textbf{Artículo 31.-} Para adquirir la condición de socio se requiere ser persona física o jurídica, y estar interesada en los fines de la Asociación. La solicitud para adquirir la condición de socio debe aceptarse por la Junta Directiva.
-
-\bigskip\bigskip
-
-\textbf{Artículo 32.-} La condición de socio se perderá por alguna de las siguientes causas:
-\begin{itemize}
-\item [a)] Por renuncia voluntaria, comunicada por escrito a la Junta Directiva.
-\item [b)] Por impago reiterado de la cuota de la asociación.
-\item [c)] Por incumplimiento grave de los presentes Estatutos o de los acuerdos válidamente adoptados por los órganos sociales.
-\end{itemize}
-
-\bigskip\bigskip
-\newpage
-\begin{center}
-\textbf{CAPÍTULO V. Derechos y Deberes de los Socios}
-\end{center}
-
-\bigskip\bigskip
-
-\textbf{Artículo 33.-} Son derechos de los socios:
-\begin{itemize}
-\item [a)] Participar en las actividades de la asociación y en los órganos de gobierno y representación, a ejercer el derecho de voto, así como a asistir a la Asamblea General, de acuerdo con los Estatutos.
-\item [b)] Ser informado acerca de la composición de los órganos de gobierno y representación de la asociación, de su estado de cuentas y del desarrollo de su actividad.
-\item [c)] Ser oído con carácter previo a la adopción de medidas disciplinarias contra él y ser informado de los hechos que den lugar a tales medidas, debiendo ser motivado el acuerdo que, en su caso, imponga la sanción.
-\item [d)] Acceder a la documentación de la asociación, a través de la Junta Directiva.
-\item [e)] Usar los bienes e instalaciones de uso común de la Asociación, con respeto a igual derecho del resto de los socios.
-\end{itemize}
-
-\bigskip\bigskip
-
-\textbf{Artículo 34.-} Son deberes de los socios:
-\begin{itemize}
-\item [a)] Compartir las finalidades de la asociación y colaborar para la consecución de las mismas.
-\item [b)] Pagar las cuotas, derramas y otras aportaciones que, con arreglo a los Estatutos, puedan corresponder a cada socio.
-\item [c)] Cumplir el resto de obligaciones que resulten de las disposiciones estatutarias.
-\item [d)] Acatar y cumplir los acuerdos válidamente adoptados por la Junta Directiva y la Asamblea General.
-\end{itemize}
+\begin{art}
+Son deberes de los socios:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Compartir las finalidades de la asociación y colaborar para la consecución de las mismas.
+ \item Pagar las cuotas, derramas y otras aportaciones que, con arreglo a los Estatutos, puedan corresponder a cada socio.
+ \item Cumplir el resto de obligaciones que resulten de las disposiciones estatutarias.
+ \item Acatar y cumplir los acuerdos válidamente adoptados por la Junta Directiva y la Asamblea General.
+\end{enumerate}
 
 Sin perjuicio de la pérdida de la condición de socio por impago de las cuotas sociales, ínterin se procede a su expulsión, el socio tendrá en suspenso el derecho de sufragio activo y pasivo. Dicha suspensión del derecho se producirá con el impago de una sola de las cuotas y mientras se proceda a su regularización o a la pérdida definitiva de la condición de socio.
 
-\bigskip\bigskip
-\newpage
-\begin{center}
-\textbf{CAPÍTULO VI. Régimen económico}
-\end{center}
+\bigskip
 
-\bigskip\bigskip
+\begin{enumerate}[resume*=capitulo]\centering
+ \item \textbf{Régimen económico}
+\end{enumerate}
 
-\textbf{Artículo 35.-} El patrimonio fundacional de la Asociación en el momento de su constitución es de cero euros.
+\begin{art}
+El patrimonio fundacional de la Asociación en el momento de su constitución es de cero euros.
+\end{art}
 
-\bigskip\bigskip
+\begin{art}
+La Asociación deberá figurar como titular de todos los bienes y derechos que integran su patrimonio, los cuales se harán constar en su inventario y se inscribirán, en su caso, en los Registros Públicos correspondientes.
+\end{art}
 
-\textbf{Artículo 36.-} La Asociación deberá figurar como titular de todos los bienes y derechos que integran su patrimonio, los cuales se harán constar en su inventario y se inscribirán, en su caso, en los Registros Públicos correspondientes.
-
-\bigskip\bigskip
-
-\textbf{Artículo 37.-} La Asociación, para el desarrollo de sus actividades, se financiará con:
-\begin{itemize}
-\item [a)] Los recursos que provengan del rendimiento de su patrimonio, en su caso.
-\item [b)] Las cuotas de los socios, ordinarias o extraordinarias.
-\item [c)] Los donativos o subvenciones que pudieran ser concedidas por personas físicas o jurídicas, públicas o privadas.
-\item [d)] Donaciones, herencias o legados, aceptadas por la Junta Directiva.
-\item [e)] Los ingresos provenientes de sus actividades.
-\end{itemize}
+\begin{art}
+La Asociación, para el desarrollo de sus actividades, se financiará con:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Los recursos que provengan del rendimiento de su patrimonio, en su caso.
+ \item Las cuotas de los socios, ordinarias o extraordinarias.
+ \item Los donativos o subvenciones que pudieran ser concedidas por personas físicas o jurídicas, públicas o privadas.
+ \item Donaciones, herencias o legados, aceptadas por la Junta Directiva.
+ \item Los ingresos provenientes de sus actividades.
+\end{enumerate}
 
 Los beneficios obtenidos por la Asociación, derivados del ejercicio de actividades económicas, incluidas las prestaciones de servicios, deberán destinarse exclusivamente al cumplimiento de sus fines, sin que quepa en ningún caso su reparto entre los asociados ni entre sus cónyuges o personas que convivan con aquéllos con análoga relación de afectividad, ni entre sus parientes, ni su cesión gratuita a personas físicas o jurídicas con interés lucrativo.
 
-\bigskip\bigskip
-
-\textbf{Artículo 38.-} El ejercicio económico coincidirá con el año natural, por lo que comenzará el 1 de enero y finalizará el 31 de diciembre de cada año.
+\begin{art}
+El ejercicio económico coincidirá con el año natural, por lo que comenzará el 1 de enero y finalizará el 31 de diciembre de cada año.
+\end{art}
 
 Para la aprobación de cuotas extraordinarias, habrá de convocarse en Asamblea General Extraordinaria, salvo que la Asociación careciere de liquidez y la disposición y gasto correspondiente fueren urgentes, en cuyo caso bastará la adopción del acuerdo por la Junta Directiva, previo informe del Tesorero y ulterior ratificación en Asamblea General, que habrá de aprobarse en el plazo de treinta días siguientes a la adopción del acuerdo por la Junta Directiva.
 
@@ -396,34 +422,34 @@ La Asamblea General aprobará anualmente las cuentas de la Asociación, una vez 
 
 La Junta Directiva llevará los correspondientes libros de contabilidad, que permitan obtener una imagen fiel del patrimonio, el resultado y la situación financiera de la Asociación.
 
-\bigskip\bigskip
+\bigskip
 
-\begin{center}
-\textbf{CAPÍTULO VII. Disolución y aplicación del capital social}
-\end{center}
+\begin{enumerate}[resume*=capitulo]\centering
+ \item \textbf{Disolución y aplicación del capital social}
+\end{enumerate}
 
-\bigskip\bigskip
+\begin{art}
+La Asociación se disolverá por las siguientes causas:
+\end{art}
+\begin{enumerate}[label={\alph*)}]
+ \item Por acuerdo adoptado por mayoría cualificada en Asamblea General Extraordinaria.
+ \item Por las causas que se determinan en el artículo 39 del Código Civil.
+ \item Por sentencia judicial firme.
+\end{enumerate}
 
-\textbf{Artículo 39.-} La Asociación se disolverá por las siguientes causas:
-\begin{itemize}
-\item [a)] Por acuerdo adoptado por mayoría cualificada en Asamblea General Extraordinaria.
-\item [b)] Por las causas que se determinan en el artículo 39 del Código Civil.
-\item [c)] Por sentencia judicial firme.
-\end{itemize}
-
-\bigskip\bigskip
-
-\textbf{Artículo 40.-} Acordada la disolución de la Asociación, se abre el periodo de liquidación, hasta el fin del cual la entidad conservará su personalidad jurídica. Los miembros de la Junta Directiva en el momento de la disolución se convierten en liquidadores, salvo que los designe expresamente la Asamblea General o el juez que, en su caso, acuerde la disolución.
+\begin{art}
+Acordada la disolución de la Asociación, se abre el periodo de liquidación, hasta el fin del cual la entidad conservará su personalidad jurídica. Los miembros de la Junta Directiva en el momento de la disolución se convierten en liquidadores, salvo que los designe expresamente la Asamblea General o el juez que, en su caso, acuerde la disolución.
+\end{art}
 
 Corresponde a los liquidadores:
-\begin{itemize}
-\item [a)] Velar por la integridad del patrimonio de la Asociación.
-\item [b)] Concluir las operaciones pendientes y efectuar las nuevas que sean precisas para la liquidación.
-\item [c)] Cobrar los créditos de la Asociación.
-\item [d)] Liquidar el patrimonio y pagar a los acreedores.
-\item [e)] Aplicar los bienes sobrantes a los fines previstos por los Estatutos.
-\item [f)] Solicitar la cancelación de los asientos en el Registro.
-\end{itemize}
+\begin{enumerate}[label={\alph*)}]
+ \item Velar por la integridad del patrimonio de la Asociación.
+ \item Concluir las operaciones pendientes y efectuar las nuevas que sean precisas para la liquidación.
+ \item Cobrar los créditos de la Asociación.
+ \item Liquidar el patrimonio y pagar a los acreedores.
+ \item Aplicar los bienes sobrantes a los fines previstos por los Estatutos.
+ \item Solicitar la cancelación de los asientos en el Registro.
+\end{enumerate}
 
 El patrimonio resultante después de pagadas las deudas y cargas sociales, se destinará a entidades no lucrativas que persigan fines de interés general análogos a los realizados por la misma.
 
